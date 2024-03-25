@@ -7,7 +7,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="sister-portfolio" element={<Home />} />
+        <Route path="/sister-portfolio" element={<Home />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
