@@ -1,11 +1,11 @@
 import React from "react";
 
-export const Home = () => {
+export const MyProjects = () => {
   return (
     <>
-      <h1>Home</h1>
+      <h1>My Projects</h1>
       <div className="container">
-        <p>Home page here</p>
+        <p>My Projects page here</p>
       </div>
     </>
   );

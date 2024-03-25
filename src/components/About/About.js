@@ -1,11 +1,11 @@
 import React from "react";
 
-export const Home = () => {
+export const About = () => {
   return (
     <>
-      <h1>Home</h1>
+      <h1>About Me</h1>
       <div className="container">
-        <p>Home page here</p>
+        <p>About page here</p>
       </div>
     </>
   );
