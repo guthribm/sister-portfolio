@@ -105,7 +105,7 @@ export const Home = () => {
               p={5}
               sx={{ maxWidth: "450px", marginX: "auto" }}
             >
-              <Typography variant="h2" fontFamily={"Rum Raisin"}>
+              <Typography id="about" variant="h2" fontFamily={"Rum Raisin"}>
                 Who <br /> Am I?
               </Typography>
               <Typography variant="body1">
