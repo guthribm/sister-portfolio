@@ -52,8 +52,9 @@ export const Home = () => {
   const homePageStyles = {
     display: "flex",
     justifyContent: "center",
+    padding: "2rem 0",
     alignItems: "center",
-    height: "90vh",
+    minHeight: "90vh",
     maxWidth: "100vw!important",
     background:
       "linear-gradient(25deg, rgba(178,106,230,1) 0%, rgba(210,35,92,1) 20%, rgba(205,150,72,1) 50%, rgba(219,44,221,1) 100%)",
@@ -99,7 +100,11 @@ export const Home = () => {
       <Container sx={AboutMeStyles}>
         <Grid container spacing={2} textAlign={"center"} alignItems={"center"}>
           <Grid item xs={12} md={6}>
-            <Stack spacing={2} p={5}>
+            <Stack
+              spacing={2}
+              p={5}
+              sx={{ maxWidth: "450px", marginX: "auto" }}
+            >
               <Typography variant="h2" fontFamily={"Rum Raisin"}>
                 Who <br /> Am I?
               </Typography>
