@@ -11,6 +11,17 @@ export const Footer = () => {
     height: "50px",
   };
 
+  const phoneStyles = {
+    fontSize: "1.5rem",
+    cursor: "pointer",
+    "& a": {
+      color: "#000",
+    },
+    "& a:visited": {
+      color: "#f00",
+    },
+  };
+
   const theme = createTheme();
 
   theme.typography.h2 = {
@@ -40,7 +51,7 @@ export const Footer = () => {
     <ThemeProvider theme={theme}>
       <Stack>
         <Stack sx={{ background: "#f47cb9" }}>
-          <Box marginY={5} padding={"3rem"}>
+          <Box padding={"3rem"} textAlign={"center"}>
             <Typography
               variant="h2"
               fontFamily={"Rum Raisin"} // fontSize={"8rem"}
@@ -51,7 +62,11 @@ export const Footer = () => {
             >
               Grow with me.
             </Typography>
-            <Typography variant="body1" color={"#fff"}>
+            <Typography
+              variant="body1"
+              color={"#fff"}
+              sx={{ "&a:visited": { color: "#000" } }}
+            >
               Let's imporve your processes together.
             </Typography>
           </Box>
@@ -74,9 +89,12 @@ export const Footer = () => {
             >
               PHONE
             </Typography>
-            <Typography variant="body2" fontSize={"1.5rem"}>
-              580-236-9257
+            <Typography variant="body2" sx={phoneStyles}>
+              <a href="tel:+15802369257">580-236-9257</a>
             </Typography>
+            {/* <Button sx={phoneStyles}>
+              <a href="tel:+15802369257">580-236-9257</a>
+            </Button> */}
           </Grid>
           <Grid item>
             <Typography
@@ -87,6 +105,16 @@ export const Footer = () => {
             >
               EMAIL
             </Typography>
+            {/* <Button
+                            disabled={item?.Phones?.length > 0 ? false : true}
+                            variant="contained"
+                            sx={{ '& a': { color: '#fff', textDecoration: 'none' } }}
+                            onClick={(e) => {
+                                handleCall(item);
+                            }}
+                        >
+                            {<a href={`tel:+1${selectedPhone?.Number}`}>Make a Call</a>}
+                        </Button> */}
             <Typography variant="body2" fontSize={"1.5rem"}>
               cguthr00@gmail.com
             </Typography>

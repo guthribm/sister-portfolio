@@ -11,12 +11,13 @@ import {
   createTheme,
 } from "@mui/material";
 import profilePicture from "../../assets/temp-image.jpg";
+import tempDesign from "../../assets/temp-design.jpg";
 
 export const Home = () => {
   const theme = createTheme();
 
   theme.typography.h1 = {
-    fontSize: "6rem",
+    fontSize: "5rem",
     lineHeight: 1,
     maxWidth: "600px",
     "@media (min-width:550px)": {
@@ -28,7 +29,7 @@ export const Home = () => {
   };
 
   theme.typography.h2 = {
-    fontSize: "5rem",
+    fontSize: "4rem",
     lineHeight: 1,
     color: "#f47cb9",
     "@media (min-width:600px)": {
@@ -84,6 +85,15 @@ export const Home = () => {
     padding: "5rem 0",
     background: "#f9e7e5",
   };
+
+  const workExperienceStyles = {
+    display: "flex",
+    // maxWidth: "100vw!important",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "5rem 0",
+    background: "#fff",
+  };
   return (
     <ThemeProvider theme={theme}>
       <Container sx={homePageStyles}>
@@ -108,7 +118,7 @@ export const Home = () => {
               <Typography id="about" variant="h2" fontFamily={"Rum Raisin"}>
                 Who <br /> Am I?
               </Typography>
-              <Typography variant="body1">
+              <Typography variant="h6">
                 I am a digital nomad currently based in the United States. I've
                 been working in design for the past six months. It was only in
                 the past two months that I decided to focus full-time on design
@@ -125,8 +135,80 @@ export const Home = () => {
                 maxHeight: { xs: 300, sm: 340, md: 390 },
                 maxWidth: { xs: 310, sm: 350, md: 420 },
               }}
-              alt="The house from the offer."
+              alt="Graphic of woman with sunglasses."
               src={profilePicture}
+            />
+          </Grid>
+        </Grid>
+      </Container>
+
+      <Container sx={workExperienceStyles}>
+        <Grid
+          container
+          spacing={2}
+          textAlign={"center"}
+          alignItems={"center"}
+          flexDirection={"row-reverse"}
+        >
+          <Grid item xs={12} md={6}>
+            <Stack
+              spacing={2}
+              p={5}
+              sx={{ maxWidth: "450px", marginX: "auto" }}
+            >
+              <Typography
+                id="about"
+                variant="h2"
+                textAlign={"left"}
+                fontFamily={"Rum Raisin"}
+              >
+                Work <br /> Experience
+              </Typography>
+              <Box textAlign={"left"}>
+                <Stack marginY={2}>
+                  <Typography variant="h5" fontWeight={700} color={"#f47cb9"}>
+                    Stinas Creative
+                  </Typography>
+                  <Typography variant="h6" color={"#000"}>
+                    E-commerce & Digital Marketing
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    fontStyle={"italic"}
+                    color={"text.secondary"}
+                  >
+                    2023-Present
+                  </Typography>
+                </Stack>
+                <Stack marginY={2}>
+                  <Typography variant="h5" fontWeight={700} color={"#f47cb9"}>
+                    Copper & Co. Jewelry
+                  </Typography>
+                  <Typography variant="h6" color={"#000"}>
+                    E-commerce
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    fontStyle={"italic"}
+                    color={"text.secondary"}
+                  >
+                    2020-2023
+                  </Typography>
+                </Stack>
+              </Box>
+            </Stack>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Box
+              component="img"
+              sx={{
+                height: 450,
+                width: 450,
+                maxHeight: { xs: 300, sm: 375, md: 420 },
+                maxWidth: { xs: 300, sm: 375, md: 420 },
+              }}
+              alt="Graphic of laptop with designs."
+              src={tempDesign}
             />
           </Grid>
         </Grid>
