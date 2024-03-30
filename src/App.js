@@ -9,14 +9,14 @@ import { Home } from "./components/Home/Home";
 import { NotFound } from "./components/NotFound/NotFound";
 import { About } from "./components/About/About";
 import { Contact } from "./components/Contact/Contact";
-import { Navbar } from "./components/Navbar/Navbar";
+// import { Navbar } from "./components/Navbar/Navbar";
 import { MyProjects } from "./components/MyProjects/MyProjects";
 import { Footer } from "./components/Footer/Footer";
 
 function App() {
   return (
     <Router>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes element={<Outlet />}>
         <Route path="/sister-portfolio" element={<Home />} />
         <Route path="/projects" element={<MyProjects />} />

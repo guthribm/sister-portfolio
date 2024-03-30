@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import profilePicture from "../../assets/temp-image.jpg";
 import tempDesign from "../../assets/temp-design.jpg";
+import { DegreeAndCertifications } from "../DegreeAndCertifications/DegreeAndCertifications";
 
 export const Home = () => {
   const theme = createTheme();
@@ -33,20 +34,22 @@ export const Home = () => {
     lineHeight: 1,
     color: "#f47cb9",
     "@media (min-width:600px)": {
-      fontSize: "6rem",
+      fontSize: "5rem",
     },
     [theme.breakpoints.up("md")]: {
-      fontSize: "7rem",
+      fontSize: "6rem",
     },
   };
 
   theme.typography.h3 = {
-    fontSize: "1.2rem",
+    fontSize: "3rem",
+    lineHeight: 1,
+    color: "#f47cb9",
     "@media (min-width:600px)": {
-      fontSize: "1.5rem",
+      fontSize: "4rem",
     },
     [theme.breakpoints.up("md")]: {
-      fontSize: "2.4rem",
+      fontSize: "5rem",
     },
   };
 
@@ -82,7 +85,7 @@ export const Home = () => {
     maxWidth: "100vw!important",
     justifyContent: "center",
     alignItems: "center",
-    padding: "5rem 0",
+    padding: "2rem 0",
     background: "#f9e7e5",
   };
 
@@ -91,7 +94,7 @@ export const Home = () => {
     // maxWidth: "100vw!important",
     justifyContent: "center",
     alignItems: "center",
-    padding: "5rem 0",
+    padding: "2rem 0",
     background: "#fff",
   };
   return (
@@ -132,8 +135,8 @@ export const Home = () => {
               sx={{
                 height: 1600,
                 width: 1500,
-                maxHeight: { xs: 300, sm: 340, md: 390 },
-                maxWidth: { xs: 310, sm: 350, md: 420 },
+                maxHeight: { xs: 280, sm: 340, md: 390 },
+                maxWidth: { xs: 290, sm: 350, md: 420 },
               }}
               alt="Graphic of woman with sunglasses."
               src={profilePicture}
@@ -159,7 +162,7 @@ export const Home = () => {
               <Typography
                 id="about"
                 variant="h2"
-                textAlign={"left"}
+                textAlign={"center"}
                 fontFamily={"Rum Raisin"}
               >
                 Work <br /> Experience
@@ -204,8 +207,8 @@ export const Home = () => {
               sx={{
                 height: 450,
                 width: 450,
-                maxHeight: { xs: 300, sm: 375, md: 420 },
-                maxWidth: { xs: 300, sm: 375, md: 420 },
+                maxHeight: { xs: 290, sm: 375, md: 420 },
+                maxWidth: { xs: 290, sm: 375, md: 420 },
               }}
               alt="Graphic of laptop with designs."
               src={tempDesign}
@@ -213,6 +216,7 @@ export const Home = () => {
           </Grid>
         </Grid>
       </Container>
+      <DegreeAndCertifications />
     </ThemeProvider>
   );
 };

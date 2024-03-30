@@ -12,7 +12,6 @@ export const Footer = () => {
   };
 
   const phoneStyles = {
-    fontSize: "1.5rem",
     cursor: "pointer",
     "& a": {
       color: "#000",
@@ -51,14 +50,13 @@ export const Footer = () => {
     <ThemeProvider theme={theme}>
       <Stack>
         <Stack sx={{ background: "#f47cb9" }}>
-          <Box padding={"3rem"} textAlign={"center"}>
+          <Box padding={"3rem"} textAlign={"center"} marginY={5}>
             <Typography
               variant="h2"
               fontFamily={"Rum Raisin"} // fontSize={"8rem"}
-              letterSpacing={5}
+              letterSpacing={2}
               color={"#fff"}
               lineHeight={1}
-              marginBottom={2}
             >
               Grow with me.
             </Typography>
@@ -67,7 +65,7 @@ export const Footer = () => {
               color={"#fff"}
               sx={{ "&a:visited": { color: "#000" } }}
             >
-              Let's imporve your processes together.
+              Let's improve your processes together.
             </Typography>
           </Box>
         </Stack>
@@ -84,40 +82,26 @@ export const Footer = () => {
             <Typography
               variant="body2"
               fontWeight={700}
-              fontSize={"2rem"}
+              fontSize={"1.25rem"}
               color={"#f47cb9"}
             >
               PHONE
             </Typography>
-            <Typography variant="body2" sx={phoneStyles}>
+            <Typography variant="body1" sx={phoneStyles}>
               <a href="tel:+15802369257">580-236-9257</a>
             </Typography>
-            {/* <Button sx={phoneStyles}>
-              <a href="tel:+15802369257">580-236-9257</a>
-            </Button> */}
           </Grid>
           <Grid item>
             <Typography
               variant="body2"
               fontWeight={700}
-              fontSize={"2rem"}
+              fontSize={"1.25rem"}
               color={"#f47cb9"}
             >
               EMAIL
             </Typography>
-            {/* <Button
-                            disabled={item?.Phones?.length > 0 ? false : true}
-                            variant="contained"
-                            sx={{ '& a': { color: '#fff', textDecoration: 'none' } }}
-                            onClick={(e) => {
-                                handleCall(item);
-                            }}
-                        >
-                            {<a href={`tel:+1${selectedPhone?.Number}`}>Make a Call</a>}
-                        </Button> */}
-            <Typography variant="body2" fontSize={"1.5rem"}>
-              cguthr00@gmail.com
-            </Typography>
+
+            <Typography variant="body1">cguthr00@gmail.com</Typography>
           </Grid>
           <Grid item>
             <Stack direction={"row"} spacing={2}>
@@ -127,31 +111,6 @@ export const Footer = () => {
             </Stack>
           </Grid>
         </Grid>
-        {/* <Stack
-          direction={"row"}
-          spacing={2}
-          width={"100vw"}
-          justifyContent={"space-evenly"}
-          alignItems={"center"}
-        >
-          <Stack p={5} marginY={"5rem"}>
-            <Typography fontWeight={700} fontSize={"2rem"} color={"#f47cb9"}>
-              PHONE
-            </Typography>
-            <Typography fontSize={"1.5rem"}>580-236-9257</Typography>
-          </Stack>
-          <Stack p={5} marginY={5}>
-            <Typography fontWeight={700} fontSize={"2rem"} color={"#f47cb9"}>
-              EMAIL
-            </Typography>
-            <Typography fontSize={"1.5rem"}>cguthr00@gmail.com</Typography>
-          </Stack>
-          <Stack p={5} marginY={5} direction={"row"} spacing={2}>
-            <FacebookIcon sx={iconStyles} />
-            <TwitterIcon sx={iconStyles} />
-            <InstagramIcon sx={iconStyles} />
-          </Stack>
-        </Stack> */}
       </Stack>
     </ThemeProvider>
   );
